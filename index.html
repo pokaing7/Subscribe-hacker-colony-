@@ -4,18 +4,24 @@
     <meta charset="UTF-8">
     <title>Subscribe First</title>
     <script>
-      // Open YouTube in a new tab and redirect after 5 seconds
-      window.onload = function() {
-        window.open("www.youtube.com/@HackersColony_Tech", "_blank");
-        setTimeout(function() {
-          window.location.href = "https://www.mediafire.com/file/zlk7f0zjk6ifict/HACKERS_COLONY_RATE_%25F0%259F%2598%2588%25F0%2598%2588_1.0.apk/file";
-        }, 5000);
-      };
+      function openYoutube() {
+        window.open("https://youtube.com/@hackers_colony_tech?si=6U08sdnyRCQV7GqD", "_blank");
+        document.getElementById("continue").style.display = "block";
+      }
+
+      function goToDownload() {
+        window.location.href = "https://www.mediafire.com/file/zlk7f0zjk6ifict/HACKERS_COLONY_RATE_%25F0%259F%2598%2588%25F0%2598%2588_1.0.apk/file";
+      }
     </script>
   </head>
   <body>
-    <h2>🚀 Please subscribe to our YouTube channel</h2>
-    <p>The channel has opened in a new tab. Kindly subscribe and return here.</p>
-    <p>📥 After that, your APK will start downloading in 5 seconds!</p>
+    <h2>🚀 Subscribe to our YouTube Channel</h2>
+    <p>Click the button below to open our YouTube channel in a new tab.</p>
+    <button onclick="openYoutube()">Subscribe</button>
+
+    <div id="continue" style="display:none; margin-top:20px;">
+      <p>✅ After subscribing, click below to continue:</p>
+      <button onclick="goToDownload()">Continue to Download</button>
+    </div>
   </body>
 </html>
