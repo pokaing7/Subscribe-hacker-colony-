@@ -5,23 +5,27 @@
     <title>Subscribe First</title>
     <script>
       function openYoutube() {
-        window.open("https://youtube.com/@hackers_colony_tech?si=6U08sdnyRCQV7GqD", "_blank");
+        window.open("https://www.youtube.com/@Hackers_colony_Tech", "_blank");
         document.getElementById("continue").style.display = "block";
       }
 
       function goToDownload() {
-        window.location.href = "https://www.mediafire.com/file/zlk7f0zjk6ifict/HACKERS_COLONY_RATE_%25F0%259F%2598%2588%25F0%2598%2588_1.0.apk/file";
+        document.getElementById("status").innerText = "⏳ Please wait... Redirecting in 10 seconds...";
+        setTimeout(function() {
+          window.location.href = "https://www.mediafire.com/file/zlk7f0zjk6ifict/HACKERS_COLONY_RATE_%25F0%259F%2598%2588%25F0%2598%2588_1.0.apk/file";
+        }, 10000); // 10 seconds = 10000 milliseconds
       }
     </script>
   </head>
-  <body>
+  <body style="font-family: Arial, sans-serif; text-align: center; margin-top: 50px;">
     <h2>🚀 Subscribe to our YouTube Channel</h2>
     <p>Click the button below to open our YouTube channel in a new tab.</p>
-    <button onclick="openYoutube()">Subscribe</button>
+    <button onclick="openYoutube()" style="padding: 10px 20px; font-size: 16px;">Subscribe</button>
 
-    <div id="continue" style="display:none; margin-top:20px;">
+    <div id="continue" style="display:none; margin-top:30px;">
       <p>✅ After subscribing, click below to continue:</p>
-      <button onclick="goToDownload()">Continue to Download</button>
+      <button onclick="goToDownload()" style="padding: 10px 20px; font-size: 16px;">Continue to Download</button>
+      <p id="status" style="margin-top: 15px; font-weight: bold;"></p>
     </div>
   </body>
 </html>
